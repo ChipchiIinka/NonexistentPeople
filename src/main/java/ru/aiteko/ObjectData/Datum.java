@@ -6,22 +6,22 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Datum{
-    public long id;
-    public Status status;
-    public Name name;
-    public BigDecimal monthlySalary;
-    public LocalDateTime birthday;
-    public String username;
-    public String password;
-    public ArrayList<String> emails;
-    public String phoneNumber;
-    public Location location;
-    public String website;
-    public String domain;
-    public Job job;
-    public CreditCard creditCard;
-    public String uuid;
-    public String objectId;
+    private long id;
+    private Status status;
+    private Name name;
+    private BigDecimal monthlySalary;
+    private LocalDateTime birthday;
+    private String username;
+    private String password;
+    private ArrayList<String> emails;
+    private String phoneNumber;
+    private Location location;
+    private String website;
+    private String domain;
+    private Job job;
+    private CreditCard creditCard;
+    private String uuid;
+    private String objectId;
 
     public long getId() {
         return id;
