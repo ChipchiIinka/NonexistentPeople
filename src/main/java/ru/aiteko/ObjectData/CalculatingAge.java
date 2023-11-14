@@ -6,10 +6,6 @@ import java.time.Period;
 
 public class CalculatingAge {
     public static int CalculatingAgeFromBirthday(LocalDateTime birthday){
-        LocalDateTime currentDateTime = LocalDateTime.now();
-        LocalDate birthDate = birthday.toLocalDate();
-        LocalDate currentDate = currentDateTime.toLocalDate();
-
-        return Period.between(birthDate, currentDate).getYears();
+        return Period.between(birthday.toLocalDate(), LocalDate.now()).getYears();
     }
 }
