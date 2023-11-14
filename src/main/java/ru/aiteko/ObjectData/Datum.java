@@ -8,25 +8,47 @@ import java.util.Objects;
 public class Datum{
     private long id;
     private Status status;
-    private Name name;
+    public Name name;
     private BigDecimal monthlySalary;
     private LocalDateTime birthday;
     private String username;
     private String password;
     private ArrayList<String> emails;
     private String phoneNumber;
-    private Location location;
+    public Location location;
     private String website;
     private String domain;
-    private Job job;
-    private CreditCard creditCard;
+    public Job job;
+    public CreditCard creditCard;
     private String uuid;
     private String objectId;
+
+    public Datum(long id, Status status, Name name, BigDecimal monthlySalary,
+                 LocalDateTime birthday, String username, String password,
+                 ArrayList<String> emails, String phoneNumber, Location location,
+                 String website, String domain, Job job, CreditCard creditCard,
+                 String uuid, String objectId) {
+        this.id = id;
+        this.status = status;
+        this.name = name;
+        this.monthlySalary = monthlySalary;
+        this.birthday = birthday;
+        this.username = username;
+        this.password = password;
+        this.emails = emails;
+        this.phoneNumber = phoneNumber;
+        this.location = location;
+        this.website = website;
+        this.domain = domain;
+        this.job = job;
+        this.creditCard = creditCard;
+        this.uuid = uuid;
+        this.objectId = objectId;
+    }
 
     public long getId() {
         return id;
     }
-
     public void setId(long id) {
         this.id = id;
     }
@@ -34,7 +56,6 @@ public class Datum{
     public Status getStatus() {
         return status;
     }
-
     public void setStatus(Status status) {
         this.status = status;
     }
@@ -42,7 +63,6 @@ public class Datum{
     public Name getName() {
         return name;
     }
-
     public void setName(Name name) {
         this.name = name;
     }
@@ -50,7 +70,6 @@ public class Datum{
     public BigDecimal getMonthlySalary() {
         return monthlySalary;
     }
-
     public void setMonthlySalary(BigDecimal monthlySalary) {
         this.monthlySalary = monthlySalary;
     }
@@ -58,7 +77,6 @@ public class Datum{
     public LocalDateTime getBirthday() {
         return birthday;
     }
-
     public void setBirthday(LocalDateTime birthday) {
         this.birthday = birthday;
     }
@@ -66,7 +84,6 @@ public class Datum{
     public String getUsername() {
         return username;
     }
-
     public void setUsername(String username) {
         this.username = username;
     }
@@ -74,7 +91,6 @@ public class Datum{
     public String getPassword() {
         return password;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }
@@ -82,7 +98,6 @@ public class Datum{
     public ArrayList<String> getEmails() {
         return emails;
     }
-
     public void setEmails(ArrayList<String> emails) {
         this.emails = emails;
     }
@@ -90,7 +105,6 @@ public class Datum{
     public String getPhoneNumber() {
         return phoneNumber;
     }
-
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
@@ -98,7 +112,6 @@ public class Datum{
     public Location getLocation() {
         return location;
     }
-
     public void setLocation(Location location) {
         this.location = location;
     }
@@ -106,7 +119,6 @@ public class Datum{
     public String getWebsite() {
         return website;
     }
-
     public void setWebsite(String website) {
         this.website = website;
     }
@@ -114,7 +126,6 @@ public class Datum{
     public String getDomain() {
         return domain;
     }
-
     public void setDomain(String domain) {
         this.domain = domain;
     }
@@ -122,7 +133,6 @@ public class Datum{
     public Job getJob() {
         return job;
     }
-
     public void setJob(Job job) {
         this.job = job;
     }
@@ -130,7 +140,6 @@ public class Datum{
     public CreditCard getCreditCard() {
         return creditCard;
     }
-
     public void setCreditCard(CreditCard creditCard) {
         this.creditCard = creditCard;
     }
@@ -138,7 +147,6 @@ public class Datum{
     public String getUuid() {
         return uuid;
     }
-
     public void setUuid(String uuid) {
         this.uuid = uuid;
     }
@@ -146,7 +154,6 @@ public class Datum{
     public String getObjectId() {
         return objectId;
     }
-
     public void setObjectId(String objectId) {
         this.objectId = objectId;
     }

@@ -1,20 +1,18 @@
 package ru.aiteko;
 
-import ru.aiteko.ObjectData.Datum;
-import ru.aiteko.ObjectData.GsonParser;
-import ru.aiteko.ObjectData.Root;
-import ru.aiteko.ObjectData.Status;
+
+import ru.aiteko.Tasks.*;
+import ru.aiteko.Tasks.Runnable;
+
+import java.util.stream.Stream;
 
 public class Main
 {
     public static void main(String[] args) {
-        GsonParser parser = new GsonParser();
-        Root root = parser.parse();
-        root.data.stream()
-                .filter(person -> person.getStatus().equals(Status.ACTIVE))
-                .map(Datum::getName)
-                .forEach(System.out::println);
+        Stream.of(new ActiveObjectsName(), new CountGmailUsers(),
+                new CreditCardsStatistics(), new SortedGoodWork(),
+                new SpecificObjectNameAndEmail(),new StateDisableObjectStatistic(),
+                new YoungWorkerGoodSalary(), new UniqueCompanyNames()
+                ).forEach(Runnable::run);
     }
-
-
 }

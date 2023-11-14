@@ -2,52 +2,12 @@ package ru.aiteko.ObjectData;
 
 import java.util.Objects;
 
-public class Job{
+public class Job implements Comparable<Job>{
     private String title;
     private String descriptor;
     private String area;
     private String type;
     private String company;
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescriptor() {
-        return descriptor;
-    }
-
-    public void setDescriptor(String descriptor) {
-        this.descriptor = descriptor;
-    }
-
-    public String getArea() {
-        return area;
-    }
-
-    public void setArea(String area) {
-        this.area = area;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
-    }
 
     public Job(String title, String descriptor,
                String area, String type, String company) {
@@ -55,6 +15,41 @@ public class Job{
         this.descriptor = descriptor;
         this.area = area;
         this.type = type;
+        this.company = company;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescriptor() {
+        return descriptor;
+    }
+    public void setDescriptor(String descriptor) {
+        this.descriptor = descriptor;
+    }
+
+    public String getArea() {
+        return area;
+    }
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+    public void setCompany(String company) {
         this.company = company;
     }
 
@@ -74,4 +69,9 @@ public class Job{
     public int hashCode() {
         return Objects.hash(title, descriptor, area, type, company);
     }
+
+    @Override
+    public int compareTo(Job sort) {
+        return title.compareTo(sort.getTitle());
+    } //для сортировки
 }

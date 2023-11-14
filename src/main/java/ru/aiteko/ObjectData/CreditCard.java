@@ -7,10 +7,15 @@ public class CreditCard{
     private String cvv;
     private String issuer;
 
+    public CreditCard(String number, String cvv, String issuer) {
+        this.number = number;
+        this.cvv = cvv;
+        this.issuer = issuer;
+    }
+
     public String getNumber() {
         return number;
     }
-
     public void setNumber(String number) {
         this.number = number;
     }
@@ -18,7 +23,6 @@ public class CreditCard{
     public String getCvv() {
         return cvv;
     }
-
     public void setCvv(String cvv) {
         this.cvv = cvv;
     }
@@ -26,14 +30,7 @@ public class CreditCard{
     public String getIssuer() {
         return issuer;
     }
-
     public void setIssuer(String issuer) {
-        this.issuer = issuer;
-    }
-
-    public CreditCard(String number, String cvv, String issuer) {
-        this.number = number;
-        this.cvv = cvv;
         this.issuer = issuer;
     }
 
