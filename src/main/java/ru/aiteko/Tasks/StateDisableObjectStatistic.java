@@ -10,8 +10,8 @@ import java.util.stream.Collectors;
 public class StateDisableObjectStatistic implements Runnable{
     @Override
     public void run() {
-        GsonParser parser = new GsonParser();
-        Root root = parser.parse();
+        Root root = GsonParser.parse();
+        assert root != null;
 
         System.out.println("Статистика неактивных пользователей по штатам - топ 5: ");
         root.data.stream()

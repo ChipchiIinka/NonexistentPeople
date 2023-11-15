@@ -8,8 +8,8 @@ import java.math.BigDecimal;
 public class SortedGoodWork implements Runnable{
     @Override
     public void run() {
-        GsonParser parser = new GsonParser();
-        Root root = parser.parse();
+        Root root = GsonParser.parse();
+        assert root != null;
 
         System.out.println("Сортированный список профессий за которые платят больше 500: ");
         root.data.stream()

@@ -8,8 +8,9 @@ import ru.aiteko.ObjectData.Status;
 public class ActiveObjectsName implements Runnable{
     @Override
     public void run() {
-        GsonParser parser = new GsonParser();
-        Root root = parser.parse();
+        Root root = GsonParser.parse();
+        assert root != null;
+
         System.out.println("Список Активыных Пользователей: ");
         root.data.stream()
                 .filter(object -> object.getStatus().equals(Status.ACTIVE))

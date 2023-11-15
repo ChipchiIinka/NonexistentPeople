@@ -6,13 +6,14 @@ import ru.aiteko.ObjectData.Root;
 public class CountGmailUsers implements Runnable{
     @Override
     public void run() {
-        GsonParser parser = new GsonParser();
-        Root root = parser.parse();
+        Root root = GsonParser.parse();
+        assert root != null;
 
         long count = root.data.stream()
-                .filter(object -> object.getEmails().get(0).endsWith("gmail.com") &&
-                        object.getEmails().get(1).endsWith("gmail.com"))
+                .filter(object ->
+                        object.getEmails().stream().allMatch(email -> email.endsWith("gmail.com")))
                 .count();
-        System.out.printf("\nКоличество Пользователей пользующихся только gmail почтой: %d\n\n", count);
+        System.out.printf(
+                "\nКоличество Пользователей пользующихся только gmail почтой: %d\n\n", count);
     }
 }

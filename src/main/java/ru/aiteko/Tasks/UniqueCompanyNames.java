@@ -6,8 +6,8 @@ import ru.aiteko.ObjectData.Root;
 public class UniqueCompanyNames implements Runnable{
     @Override
     public void run() {
-        GsonParser parser = new GsonParser();
-        Root root = parser.parse();
+        Root root = GsonParser.parse();
+        assert root != null;
 
         System.out.println("Уникальные названия компаний: ");
         root.data.stream()
